@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Real Leather Co. - Summer Sale</title>
+  <link rel="stylesheet" href="styles.css" />
+   <link rel="stylesheet" href="mega-menu.css" />
+   <link rel="stylesheet" href="heirloom-bags.css" />
+   <link rel="stylesheet" href="craftsmanship.css" />
+    <link rel="stylesheet" href="footer.css" />
+      <link rel="stylesheet" href="faq.css" />
+</head>
+<body>
+  <!-- Top Black Sale Bar -->
+ <div class="top-bar">
+  <a href="https://example.com/summer-sale" class="top-bar-link">
+    20% Off Everything Summer Essentials Sale | Use Code SUMMER20 at Checkout | Ends Soon
+  </a>
+</div>
+
+
+  <header class="main-header">
+  <!-- Top Section: Logo and Hamburger (Mobile) -->
+  <div class="top-bar-mobile">
+    <div class="header-left">
+      <div class="logo">
+        <div class="brand-name">THE REAL LEATHER CO.</div>
+        <div class="tagline">Carry Your Legacy</div>
+      </div>
+    </div>
+
+    <!-- ✅ Mobile Icon added here -->
+    <img src="images/quotepart/icon.jpg" alt="Mobile Icon" class="mobile-icon-left" />
+
+    <div class="hamburger" onclick="toggleMobileMenu()">☰</div>
+  </div>
+
+  <!-- Navigation for Desktop -->
+  <nav>
+    <ul>
+      <li>Best Sellers</li>
+
+      <!-- Work Bags Dropdown -->
+      <li class="dropdown">
+        Work Bags <i class="fas fa-chevron-down"></i>
+        <div class="dropdown-menu with-image">
+          <div class="dropdown-image">
+            <img src="images/drop1.png" alt="Leather Briefcase" />
+            <p>Leather Briefcases</p>
+          </div>
+          <div class="dropdown-columns">
+            <div class="dropdown-column">
+              <p>Briefcases</p>
+              <a href="#">Leather Briefcases</a>
+              <a href="#">Leather Laptop Bags</a>
+              <a href="#">Leather Work Bags</a>
+              <a href="#">Leather Attache Cases</a>
+            </div>
+            <div class="dropdown-column">
+              <p>Messenger Bags</p>
+              <a href="#">Leather Messenger Bags</a>
+              <a href="#">Leather Satchel Bags</a>
+            </div>
+            <div class="dropdown-column">
+              <p>Professionals</p>
+              <a href="#">Pilot Bags</a>
+              <a href="#">Doctor Bags</a>
+              <a href="#">Teacher Bags</a>
+              <a href="#">Lawyer Bags</a>
+              <a href="#">Photographer Bags</a>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <!-- Travel Bags Dropdown -->
+      <li class="dropdown">
+        Travel Bags <i class="fas fa-chevron-down"></i>
+        <div class="dropdown-menu with-image">
+          <div class="dropdown-image">
+            <img src="images/drop2.png" alt="Travel Bag" />
+            <p>Leather Backpacks</p>
+          </div>
+          <div class="dropdown-columns">
+            <div class="dropdown-column">
+              <p>Duffles</p>
+              <a href="#">Leather Duffle Bags</a>
+              <a href="#">Rolling Duffels</a>
+              <a href="#">Cabin Duffels</a>
+            </div>
+            <div class="dropdown-column">
+              <p>Backpacks</p>
+              <a href="#">Travel Backpacks</a>
+              <a href="#">Adventure Bags</a>
+            </div>
+            <div class="dropdown-column">
+              <p>Weekenders</p>
+              <a href="#">Leather Weekenders</a>
+              <a href="#">Compact Travel Bags</a>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <!-- Accessories Dropdown -->
+      <li class="dropdown">
+        Accessories <i class="fas fa-chevron-down"></i>
+        <div class="dropdown-menu with-image">
+          <div class="dropdown-image">
+            <img src="images/drop3.png" alt="Accessories" />
+            <p>Leather Wallets</p>
+          </div>
+          <div class="dropdown-columns">
+            <div class="dropdown-column">
+              <p>Wallets</p>
+              <a href="#">Men’s Wallets</a>
+              <a href="#">Card Holders</a>
+              <a href="#">Passport Holders</a>
+            </div>
+            <div class="dropdown-column">
+              <p>Belts</p>
+              <a href="#">Casual Belts</a>
+              <a href="#">Formal Belts</a>
+            </div>
+            <div class="dropdown-column">
+              <p>Gifts</p>
+              <a href="#">Gifts for Him</a>
+              <a href="#">Gifts for Her</a>
+              <a href="#">Gifts $100-$200</a>
+              <a href="#">Gifts $200+</a>
+              <a href="#">Gift Cards</a>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li>Our Story</li>
+
+      <!-- Search Bar -->
+      <div class="search-wrapper">
+        <input type="text" class="search-input" placeholder="Search..." />
+        <i class="fas fa-search search-icon"></i>
+      </div>
+
+      <li>
+        <img src="images/quotepart/icon.jpg" alt="Shopping Bag" class="icon-img" />
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Mobile Search Bar -->
+<div class="mobile-search-bar">
+  <input type="text" placeholder="Search..." />
+  <button><i class="fas fa-search"></i></button>
+</div>
+
+<!-- ✅ Mobile Drawer -->
+<div class="mobile-drawer" id="mobileDrawer">
+  <ul class="mobile-menu">
+     <li><a href="#">Best Sellers</a></li>
+    <li class="shop-item">
+      <a href="#" onclick="toggleSubmenu(event, this)">
+        Work Bags <i class="fa-solid fa-angle-down arrow"></i>
+      </a>
+      <div class="submenu">
+        <img src="images/drop1.png" class="dropdown-img" alt="Work Bags" />
+        <div class="dropdown-heading">Leather Briefcases</div>
+        <div class="submenu-links">
+          <div class="submenu-group">
+            <div class="submenu-title">Briefcases</div>
+            <a href="#">Leather Briefcases</a>
+            <a href="#">Leather Laptop Bags</a>
+            <a href="#">Leather Work Bags</a>
+            <a href="#">Leather Attache Cases</a>
+          </div>
+          <div class="submenu-group">
+            <div class="submenu-title">Messenger Bags</div>
+            <a href="#">Leather Messenger Bags</a>
+            <a href="#">Leather Satchel Bags</a>
+          </div>
+          <div class="submenu-group">
+            <div class="submenu-title">Professionals</div>
+            <a href="#">Pilot Bags</a>
+            <a href="#">Doctor Bags</a>
+            <a href="#">Teacher Bags</a>
+            <a href="#">Lawyer Bags</a>
+            <a href="#">Photographer Bags</a>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="shop-item">
+      <a href="#" onclick="toggleSubmenu(event, this)">
+        Travel Bags <i class="fa-solid fa-angle-down arrow"></i>
+      </a>
+      <div class="submenu">
+        <img src="images/drop2.png" class="dropdown-img" alt="Travel Bags" />
+        <div class="dropdown-heading">Leather Backpacks</div>
+        <div class="submenu-links">
+          <div class="submenu-group">
+            <div class="submenu-title">Duffles</div>
+            <a href="#">Leather Duffle Bags</a>
+            <a href="#">Rolling Duffels</a>
+            <a href="#">Cabin Duffels</a>
+          </div>
+          <div class="submenu-group">
+            <div class="submenu-title">Backpacks</div>
+            <a href="#">Travel Backpacks</a>
+            <a href="#">Adventure Bags</a>
+          </div>
+          <div class="submenu-group">
+            <div class="submenu-title">Weekenders</div>
+            <a href="#">Leather Weekenders</a>
+            <a href="#">Compact Travel Bags</a>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="shop-item">
+      <a href="#" onclick="toggleSubmenu(event, this)">
+        Accessories <i class="fa-solid fa-angle-down arrow"></i>
+      </a>
+      <div class="submenu">
+        <img src="images/drop3.png" class="dropdown-img" alt="Accessories" />
+        <div class="dropdown-heading">Leather Wallets</div>
+        <div class="submenu-links">
+          <div class="submenu-group">
+            <div class="submenu-title">Wallets</div>
+            <a href="#">Men’s Wallets</a>
+            <a href="#">Card Holders</a>
+            <a href="#">Passport Holders</a>
+          </div>
+          <div class="submenu-group">
+            <div class="submenu-title">Belts</div>
+            <a href="#">Casual Belts</a>
+            <a href="#">Formal Belts</a>
+          </div>
+          <div class="submenu-group">
+            <div class="submenu-title">Gifts</div>
+            <a href="#">Gifts for Him</a>
+            <a href="#">Gifts for Her</a>
+            <a href="#">Gifts $100-$200</a>
+            <a href="#">Gifts $200+</a>
+            <a href="#">Gift Cards</a>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li><a href="#">Our Story</a></li>
+  </ul>
+</div>
+
+<script>
+  function toggleMobileMenu() {
+    const drawer = document.getElementById('mobileDrawer');
+    drawer.classList.toggle('open');
+  }
+
+  function toggleSubmenu(event, element) {
+    event.preventDefault();
+    const parent = element.closest('.shop-item');
+
+    // Close all other open dropdowns
+    const allItems = document.querySelectorAll('.mobile-drawer .shop-item');
+    allItems.forEach((item) => {
+      if (item !== parent) {
+        item.classList.remove('open');
+      }
+    });
+
+    // Toggle current
+    parent.classList.toggle('open');
+  }
+</script>
+
+<script defer src="script.js"></script>
+
+ 
+
+   
+
+
+
+    
+                                   <!-- Info Bar -->
+  <div class="info-bar">
+    <div>50,000+ Heirloom Bags Shipped</div>
+    <div>1 Year Warranty & 30 Day Returns</div>
+    <div>Rated 4.8/5 from 1300+ Reviews</div>
+     <div class="mobile-only">50,000+ Heirloom Bags Shipped | Rated 4.8/5</div>
+  </div>
+
+
+
+                                         <!-- Hero Image -->
+<!-- Clickable Hero Image -->
+<div class="hero-wrapper">
+  <!-- Desktop Image -->
+  <a href="https://example.com" class="hero-desktop">
+    <img src="images/se_desktop.webp" alt="Summer Essentials Banner" class="hero-image" />
+  </a>
+
+  <!-- Mobile Image -->
+  <a href="https://example.com" class="hero-mobile">
+    <img src="images/mobile/hero.png" alt="Summer Essentials Mobile Banner" class="hero-image" />
+  </a>
+</div>
+
+
+
+
+                                      <!-- As Seen In Section -->
+  <section class="as-seen-in-section">
+    <h2>As seen in</h2>
+    <div class="as-seen-logos-wrapper"> 
+    <div class="as-seen-logos">
+      <img src="images/GQ-Logo_1.avif" alt="GQ" />
+      <img src="images/esquire.png" alt="Esquire" />
+      <img src="images/travel+leisure.png" alt="Travel + Leisure" />
+      <img src="images/readers.png" alt="Reader's Digest" />
+      <img src="images/buisness.png" alt="European Business Review" />
+    </div>
+    </div>
+  </section>
+
+
+
+
+  <section class="featured-categories">
+  <div class="featured-grid">
+    <div class="featured-item">
+      <img src="images/1.png" alt="Leather Belts">
+      <p>Leather Briefcases →</p>
+    </div>
+    <div class="featured-item">
+      <img src="images/2.png" alt="Leather Keychains">
+      <p>Leather Backpacks →</p>
+    </div>
+    <div class="featured-item">
+      <img src="images/3.png" alt="Leather Journals">
+      <p>Leather Duffle Bags →</p>
+    </div>
+    <div class="featured-item">
+      <img src="images/4.png" alt="Leather Shoes">
+      <p>Leather Sling Bags →</p>
+    </div>
+    <div class="featured-item">
+      <img src="images/5.png" alt="Leather Gloves">
+      <p>Leather Fanny Packs →</p>
+    </div>
+    <div class="featured-item">
+      <img src="images/6.png" alt="Leather Notebooks">
+      <p>Leather Wallets →</p>
+    </div>
+  </div>
+   <div class="view-all-wrapper">
+    <a href="#" class="view-all-button">VIEW ALL</a>
+  </div>
+</section>
+
+
+
+
+
+
+<section class="testimonial-section">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide testimonial">
+        <p class="quote">“Not just a bag—an heirloom investment in something lasting, personal, and timeless.”</p>
+        <img src="images/GQ-Logo_1.avif" alt="GQ Logo" class="testimonial-logo" />
+      </div>
+      <div class="swiper-slide testimonial">
+        <p class="quote">“Bags that age like a fine wine - gaining more character over time.”</p>
+        <img src="images/esquire.png" alt="Esquire Logo" class="testimonial-logo" />
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+<!-- Swiper JS (always before your script) -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Your Initialization Script -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    new Swiper(".mySwiper", {
+      loop: false,
+      spaceBetween: 20,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      slidesPerView: 1, // default: mobile view
+
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        }
+      }
+    });
+  });
+</script>
+
+
+
+
+
+
+<!-- New Card Section -->
+<section class="newcard-section">
+  <div class="new-grid">
+    <div class="new-card">
+      <img src="images/1.2.jpg" alt="The Heritage" class="card-image">
+      <img src="images/1.1.png" alt="The Heritage Hover" class="card-hover-image">
+      <div class="card-details">
+        <h3>The Heritage</h3>
+        <div class="rating">★★★★★ 4.9/5 (9)</div>
+        <div class="price">$435</div>
+      </div>
+    </div>
+
+    <div class="new-card">
+      <img src="images/2.2.png" alt="The Skyler" class="card-image">
+      <img src="images/2.1.png" alt="The Skyler Hover" class="card-hover-image">
+      <div class="card-details">
+        <h3>The Skyler</h3>
+        <div class="rating">★★★★★ 4.6/5 (18)</div>
+        <div class="price">$375</div>
+      </div>
+    </div>
+
+
+    <div class="new-card">
+      <img src="images/3.2.jpg" alt="The Herald" class="card-image">
+      <img src="images/3.1.png" alt="The Herald Hover" class="card-hover-image">
+      <div class="card-details">
+        <h3>The Herald</h3>
+        <div class="rating">★★★★★ 5.0/5 (3)</div>
+        <div class="price">$435</div>
+      </div>
+    </div>
+
+    <div class="new-card">
+      <img src="images/4.2.jpg" alt="The Heritage 2" class="card-image">
+      <img src="images/4.1.png" alt="The Heritage 2 Hover" class="card-hover-image">
+      <div class="card-details">
+        <h3>The Standard</h3>
+        <div class="rating">★★★★★ 4.8/5 (53)</div>
+        <div class="price">$375</div>
+      </div>
+    </div>
+
+    <div class="new-card">
+      <img src="images/5.2.jpg" alt="The Skyler 2" class="card-image">
+      <img src="images/5.1.png" alt="The Skyler 2 Hover" class="card-hover-image">
+      <div class="card-details">
+        <h3>The Man bag</h3>
+        <div class="rating">★★★★★ 4.6/5 (40)</div>
+        <div class="price">$200</div>
+      </div>
+    </div>
+
+    <div class="new-card">
+      <img src="images/6.png" alt="The Herald 2" class="card-image">
+      <img src="images/6.2.jpg" alt="The Herald 2 Hover" class="card-hover-image">
+      <div class="card-details">
+        <h3>The Jones</h3>
+        <div class="rating">★★★★★ 4.6/5 (71)</div>
+        <div class="price">$375</div>
+      </div>
+    </div>
+  </div>
+</section>
+ <div class="view-all-wrapper">
+    <button class="view-all-button">VIEW ALL</button>
+  </div>
+
+
+  
+
+<!-- === UNIQUE TESTIMONIAL SECTION START === -->
+<section class="unique-testimonial-section">
+  <div class="unique-testimonial-wrapper">
+    <!-- Card 1 -->
+    <div class="unique-testimonial-card" style="background-image: url('images/quotepart/1.jpg')">
+      <div class="unique-stars">★★★★★</div>
+      <div class="unique-quote">"Let me state this: After your demise, your children will fight over who gets this bag!"</div>
+      <div class="unique-author">Jesse S. <span class="unique-verified">Verified</span></div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="unique-testimonial-card" style="background-image: url('images/quotepart/2.jpg')">
+      <div class="unique-stars">★★★★★</div>
+      <div class="unique-quote">"My grandson will truly have this bag for life—it's the high-end quality I hoped for when I ordered."</div>
+      <div class="unique-author">James K. <span class="unique-verified">Verified</span></div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="unique-testimonial-card" style="background-image: url('images/quotepart/3.jpg')">
+      <div class="unique-stars">★★★★★</div>
+      <div class="unique-quote">"Something worth keeping forever & creating an heirloom from—full of decades of adventure, stories, and memories."</div>
+      <div class="unique-author">Jeffery L. <span class="unique-verified">Verified</span></div>
+    </div>
+  </div>
+ <div class="view-all-wrapper">
+    <a href="#" class="view-all-button">VIEW ALL</a>
+  </div>
+
+  
+</section>
+
+<!-- === UNIQUE TESTIMONIAL SECTION END === -->
+
+
+
+
+
+<!-- === hair loom  === -->
+<section class="heirloom-bags-ad">
+  <div class="text-section">
+    <h1>50,000+ Heirloom Bags 
+      <br>Shipped</h1>
+    <p>Whether it’s walking into a new job, the daily <br>commute or a weekend getaway, over 50,000 <br>lawyers, bankers and executives trust our leather<br> bags to help them carry with confidence.</p><br>
+    <p>Rated 4.8/5 stars from over a thousand verified <br>reviews, our timeless designs and heirloom quality<br> craftsmanship are built to impress - wherever life<br> takes you.</p><br>
+    <button>SHOP BEST SELLERS</button>
+  </div>
+  <div class="image-section">
+    <img src="images/hairloompart/1.png" alt="Man with leather bag" style="border-radius: 20px;">
+  </div>
+</section>
+
+
+
+
+
+     
+  <div class="main-wrapper">
+  <div class="photo-area">
+    <img src="images/quotepart/nothairloom.png" alt="Craftsmanship at work">
+  </div>
+  <div class="content-area">
+    <h1><span>Crafted for Those</span><span>Who Expect More</span></h1>
+    <p>From a quiet attic workshop in rural England to</p>
+    <p>50,000 professionals worldwide, our story is</p>
+    <p>rooted in legacy, craftsmanship, and purpose.</p><br>
+    <p>Discover how a grandfather's lesson led to</p>
+    <p>something truly lasting.</p>
+    <button>READ OUR STORY</button>
+  </div>
+</div>
+
+
+
+
+
+<!-- FAQ Section Start -->
+<div class="faq-container">
+  <!-- Title -->
+  <h1>FAQ</h1>
+
+  <!-- Intro Text -->
+  <p class="intro">
+    Find all the answers you need to enjoy our premium leather goods with confidence.
+    Explore our<br> FAQs to learn about our high-quality materials, easy returns, free shipping, and more.
+  </p>
+
+  <!-- FAQ Item 1 -->
+  <div class="faq-item">
+    <h2>How long do your leather bags last?
+<i class="fas fa-chevron-right"></i></h2>
+    <p class="answer">
+      To make our leather bags, we use only the finest full grain leather, reinforced hardware and expert craftsmanship.
+      With proper care, they'll age beautifully and only get better over the years.
+      Many of our customers see them as heirlooms in the making.
+    </p>
+  </div>
+
+  <!-- FAQ Item 2 -->
+  <div class="faq-item">
+    <h2>Do you offer a warranty or guarantee?
+<i class="fas fa-chevron-right"></i></h2>
+    <p class="answer">All our bags come with a 1-year warranty covering manufacturing defects. We’ll repair or replace your bag if anything goes wrong. Read more on our Warranty Policy.
+    </p>
+  </div>
+
+  <!-- Repeat for each FAQ item -->
+  <div class="faq-item">
+    <h2>Can I return or exchange my order?
+<i class="fas fa-chevron-right"></i></h2>
+    <p class="answer">Absolutely—we offer hassle-free returns within 30 days and exchanges are also available. We’ll make sure you end up with the right piece. Read more on our Returns Policy</p>
+  </div>
+
+  <div class="faq-item">
+    <h2>How long does shipping take, and is it free?<i class="fas fa-chevron-right"></i></h2>
+    <p class="answer">Your order will be processed within 1-2 days, and then delivery typically takes 2-5 days. Best of all, shipping is free to the contiguous US, UK, and Canada. Read more on our Shipping Policy.</p>
+  </div>
+
+  <div class="faq-item">
+    <h2>How do I care for your leather bags?<i class="fas fa-chevron-right"></i></h2>
+    <p class="answer">To keep our bags looking their best, we recommend regular conditioning with a leather cream and avoiding prolonged exposure to water. For more information, read our leather care guide.</p>
+  </div>
+
+  <div class="faq-item">
+    <h2>Will my device fit?<i class="fas fa-chevron-right"></i></h2>
+    <p class="answer">To check if your device fits any product:<br>
+1. Measure diagonally across your screen (only the screen, not the frame or edges).<br>
+2. Round down to the nearest whole inch (e.g., 15.6” becomes 15”).<br>
+3. If your measurement is equal to or smaller than the size given on the product page, <br>your device will fit. If larger, consider a different bag size.<br>
+Example: A 14-inch laptop will fit any bag labeled for up to 15-inch devices.</p>
+  </div>
+
+  <div class="faq-item">
+    <h2>Will this bag fit me?<i class="fas fa-chevron-right"></i></h2>
+    <p class="answer">Yes - our leather bags are designed for all body sizes, with adjustable shoulder and backpack straps available on our leather goods.
+Real leather is naturally heavier, so we’ve made the straps easy to adjust for maximum comfort and effortless carrying.</p>
+  </div>
+
+  <div class="faq-item">
+    <h2>Is your checkout safe and secure?<i class="fas fa-chevron-right"></i></h2>
+    <p class="answer">Yes—our site uses full SSL encryption and secure payment providers. We accept all major credit cards, PayPal, and pay-in-4 options.
+    </p>
+  </div>
+
+  <div class="faq-item">
+    <h2>How can I contact customer support?<i class="fas fa-chevron-right"></i></h2>
+    <p class="answer">Our leather experts are here to help. Reach out anytime via our contact page and we’ll get back to you quickly.
+    </p>
+  </div>
+</div>
+<script src="faq.js"></script>
+<!-- FAQ Section End -->
+
+
+
+
+
+
+
+<!-- Info Bar -->
+  <div class="info-bar">
+    <div>50,000+ Heirloom Bags Shipped</div>
+    <div>1 Year Warranty & 30 Day Returns</div>
+    <div>Rated 4.8/5 from 1300+ Reviews</div>
+  </div>
+
+  <footer class="footer">
+  <!-- Email Sign-up Section -->
+  <div class="email-section">
+    <p>Get exclusive access to sales and new releases:</p>
+    <input type="email" placeholder="Enter your email">
+  </div>
+<!-- Main Footer Content -->
+<div class="footer-main-content">
+  <div class="footer-wrapper">
+
+    <!-- Logo -->
+    <div class="footer-left">
+      <img src="images/quotepart/the-real-leather-company-icon-white-svg.svg" alt="Logo" class="footer-logo" id="footerImage">
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="footer-links">
+
+      <!-- Shop Section with Enhanced Dropdown -->
+      <div class="footer-section shop">
+        <h3>Shop</h3>
+        <ul class="shop-menu">
+             
+          <li class="shop-item">
+            <a href="#">Best Sellers</a>
+          </li>
+
+          <!-- Accessories Dropdown -->
+          <li class="shop-item">
+            <span class="toggle">Accessories <i class="fa-solid fa-angle-down arrow"></i></span>
+            <div class="submenu">
+              <img src="images/1.png" alt="Leather Wallet" class="dropdown-img">
+              <p class="dropdown-heading">Leather Wallets</p>
+              <div class="submenu-links">
+                <div class="submenu-group">
+                  <p class="submenu-title">Accessories</p>
+                  <a href="#">All Leather Accessories</a>
+                  <a href="#">All Leather Goods</a>
+                  <a href="#">Leather Care Items</a>
+                </div>
+                <div class="submenu-group">
+                  <p class="submenu-title">Wallets & Journals</p>
+                  <a href="#">Leather Wallets</a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Travel Bags Dropdown -->
+          <li class="shop-item">
+            <span class="toggle">Travel Bags <i class="fa-solid fa-angle-down arrow"></i></span>
+            <div class="submenu">
+              <img src="images/1.png" alt="Travel Bag" class="dropdown-img">
+              <p class="dropdown-heading">Leather Travel Bags</p>
+              <div class="submenu-links">
+                <div class="submenu-group">
+                  <p class="submenu-title">Travel Bags</p>
+                  <a href="#">All Travel Bags</a>
+                  <a href="#">Duffle Bags</a>
+                  <a href="#">Weekender Bags</a>
+                </div>
+                <div class="submenu-group">
+                  <p class="submenu-title">Rolling & Cabin</p>
+                  <a href="#">Carry-On Bags</a>
+                  <a href="#">Rolling Luggage</a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Work Bags Dropdown -->
+          <li class="shop-item">
+            <span class="toggle">Work Bags <i class="fa-solid fa-angle-down arrow"></i></span>
+            <div class="submenu">
+              <img src="images/1.png" alt="Work Bag" class="dropdown-img">
+              <p class="dropdown-heading">Leather Work Bags</p>
+              <div class="submenu-links">
+                <div class="submenu-group">
+                  <p class="submenu-title">Work Essentials</p>
+                  <a href="#">Messenger Bags</a>
+                  <a href="#">Briefcases</a>
+                  <a href="#">Laptop Bags</a>
+                </div>
+                <div class="submenu-group">
+                  <p class="submenu-title">Specialty</p>
+                  <a href="#">Portfolio Bags</a>
+                  <a href="#">Satchels</a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Our Story Link -->
+          <li class="shop-item">
+            <a href="#">Our Story</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Company Section -->
+      <div class="footer-section company">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Reviews</a></li>
+          <li><a href="#">Shipping & Delivery</a></li>
+          <li><a href="#">Returns & Exchanges</a></li>
+          <li><a href="#">Warranty</a></li>
+          <li><a href="#">Bulk Orders</a></li>
+          <li><a href="#">The Leather Blog</a></li>
+          <li><a href="#">Leather Care Guide</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+
+    </div> <!-- /.footer-links -->
+  </div> <!-- /.footer-wrapper -->
+</div> <!-- /.footer-main-content -->
+
+<!-- Bottom Notice -->
+<div class="footer-bottom">
+  <p>© 2023 The Real Leather Co. &nbsp; | &nbsp;
+    <a href="#">Refund Policy</a> &nbsp; | &nbsp;
+    <a href="#">Privacy Policy</a> &nbsp; | &nbsp;
+    <a href="#">Terms of Service</a> &nbsp; | &nbsp;
+    <a href="#">Shipping</a>
+  </p>
+</div>
+</footer>
+
+<!-- Dropdown Toggle Script -->
+<script>
+  document.querySelectorAll('.shop-item .toggle').forEach(toggle => {
+    toggle.addEventListener('click', function () {
+      const currentItem = this.closest('.shop-item');
+
+      // Close all others
+      document.querySelectorAll('.shop-item').forEach(item => {
+        if (item !== currentItem) {
+          item.classList.remove('open');
+          item.querySelector('.arrow')?.classList.remove('fa-times');
+          item.querySelector('.arrow')?.classList.add('fa-angle-down');
+        }
+      });
+
+      // Toggle current one
+      currentItem.classList.toggle('open');
+
+      // Icon toggle
+      const icon = this.querySelector('.arrow');
+      if (currentItem.classList.contains('open')) {
+        icon.classList.remove('fa-angle-down');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-angle-down');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

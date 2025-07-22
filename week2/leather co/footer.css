@@ -1,0 +1,269 @@
+.footer {
+  background-color: #111;
+  color: #fff;
+  padding: 40px 20px;
+  font-family: sans-serif;
+}
+
+/* Email Section */
+.email-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.email-section p {
+  margin-bottom: 10px;
+  font-size: 1em;
+  color: white;
+}
+
+.email-section input {
+  padding: 15px;
+  width: 300px;
+  max-width: 90%;
+  border: 1px solid white;
+  border-radius: 7px;
+  background-color: black;
+  color: white;
+  font-size: 1em;
+  outline: none;
+}
+
+/* Footer Main Content */
+.footer-main-content {
+  border-top: 1px solid #333;
+  padding-top: 30px;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-left {
+  flex: 1 1 200px;
+  margin-bottom: 20px;
+}
+
+.footer-logo {
+  width: 70px;
+  height: auto;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+/* Footer Links */
+.footer-links {
+  display: flex;
+  flex: 2 1 600px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 60px;
+  padding-left: 40px;
+}
+
+.footer-section h3 {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  color: #fff;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  color: #bbb;
+  text-decoration: none;
+  font-size: 0.95em;
+}
+
+.footer-section ul li a:hover {
+  color: #fff;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: left;
+  margin-top: 30px;
+  font-size: 0.85em;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  color: #aaa;
+}
+
+.footer-bottom a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  color: #fff;
+}
+
+/* Section Layout */
+.footer-section.shop,
+.footer-section.company {
+  flex: 1 1 300px;
+  min-width: 250px;
+}
+
+/* Shop Dropdown Styling */
+.footer-section.shop .shop-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section.shop .shop-item {
+  margin-bottom: 10px;
+}
+
+.footer-section.shop .toggle {
+  color: #bbb;
+  font-size: 0.95em;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-section.shop .toggle:hover {
+  color: #fff;
+}
+
+/* Dropdown Panel (Default hidden) */
+.footer-section.shop .submenu {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding: 0;
+  animation: none;
+  transition: none;
+  background-color: white;
+  padding: 10px;
+}
+
+/* When Open: animate submenu */
+.footer-section.shop .shop-item.open .submenu {
+  animation: dropdownOpen 0.4s ease forwards;
+}
+
+/* Dropdown Animation */
+@keyframes dropdownOpen {
+  0% {
+    max-height: 0;
+    opacity: 0;
+    padding-top: 0;
+  }
+  100% {
+    max-height: 1000px;
+    opacity: 1;
+    padding-top: 10px;
+  }
+}
+
+/* Dropdown Image */
+.footer-section.shop .dropdown-img {
+  width: 100%;
+  max-width: 400px;
+  max-height: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+  object-fit: cover;
+}
+
+/* Heading under image */
+.footer-section.shop .dropdown-heading {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+  color: black;
+}
+
+/* Submenu layout */
+.submenu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 10px;
+}
+
+/* Submenu Groups */
+.submenu-group {
+  border-top: 1px solid black;
+  padding-top: 10px;
+}
+
+.submenu-title {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: black;
+}
+
+/* Submenu Links */
+.submenu-group a {
+  display: block;
+  text-decoration: none;
+  font-size: 0.9em;
+  color: black;
+  margin: 4px 0;
+}
+
+.submenu-group a:hover {
+  color: black;
+}
+
+/* Arrow Icon Animation */
+.footer-section.shop .arrow {
+  display: inline-block;
+  transition: transform 0.4s ease;
+  font-size: 0.8em;
+}
+
+.footer-section.shop .shop-item.open .arrow {
+  transform: rotate(45deg);
+}
+@media (max-width: 767px) {
+  .footer-wrapper {
+    flex-direction: column;
+    align-items: flex-start; /* Align Shop & Company to left */
+    padding: 0 20px;
+  }
+
+  .footer-left {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .footer-logo {
+    margin: 0 auto; /* Center logo */
+    display: block;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 30px;
+    padding-left: 0;
+    width: 100%;
+  }
+
+  .footer-section {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .footer-bottom {
+    text-align: center;
+  }
+}

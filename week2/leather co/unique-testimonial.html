@@ -1,0 +1,70 @@
+<section class="unique-testimonial-section">
+
+  <div class="unique-testimonial-wrapper">
+    <!-- Card 1 -->
+    <div class="unique-testimonial-card" style="background-image: url('images/quotepart/1.jpg')">
+      <div class="unique-stars">★★★★★</div>
+      <div class="unique-quote">"Let me state this: After your demise, your children will fight over who gets this bag!"</div>
+      <div class="unique-author">Jesse S. <span class="unique-verified">Verified</span></div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="unique-testimonial-card" style="background-image: url('images/quotepart/2.jpg')">
+      <div class="unique-stars">★★★★★</div>
+      <div class="unique-quote">"My grandson will truly have this bag for life—it's the high-end quality I hoped for when I ordered."</div>
+      <div class="unique-author">James K. <span class="unique-verified">Verified</span></div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="unique-testimonial-card" style="background-image: url('images/quotepart/3.jpg')">
+      <div class="unique-stars">★★★★★</div>
+      <div class="unique-quote">"Something worth keeping forever & creating an heirloom from—full of decades of adventure, stories, and memories."</div>
+      <div class="unique-author">Jeffery L. <span class="unique-verified">Verified</span></div>
+    </div>
+  </div>
+
+  <!-- Dots for pagination on mobile -->
+  <div class="testimonial-dots"></div>
+
+  <div class="view-all-wrapper">
+    <a href="#" class="view-all-button">VIEW ALL</a>
+  </div>
+
+</section>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const wrapper = document.querySelector(".unique-testimonial-wrapper");
+    const allCards = Array.from(wrapper.children).filter(el => el.classList.contains("unique-testimonial-card"));
+    const dotsContainer = document.querySelector(".testimonial-dots");
+
+    // Only enable pagination on mobile
+    if (window.innerWidth <= 768) {
+      const cardsPerPage = 1;
+      const totalPages = Math.ceil(allCards.length / cardsPerPage);
+      let currentIndex = 0;
+
+      function showPage(index) {
+        wrapper.innerHTML = "";
+        const start = index * cardsPerPage;
+        const end = start + cardsPerPage;
+        allCards.slice(start, end).forEach(card => wrapper.appendChild(card));
+        updateDots(index);
+      }
+
+      function updateDots(activeIndex) {
+        dotsContainer.innerHTML = "";
+        for (let i = 0; i < totalPages; i++) {
+          const dot = document.createElement("div");
+          dot.className = "testimonial-dot" + (i === activeIndex ? " active" : "");
+          dot.addEventListener("click", () => {
+            currentIndex = i;
+            showPage(currentIndex);
+          });
+          dotsContainer.appendChild(dot);
+        }
+      }
+
+      showPage(currentIndex);
+    }
+  });
+</script>

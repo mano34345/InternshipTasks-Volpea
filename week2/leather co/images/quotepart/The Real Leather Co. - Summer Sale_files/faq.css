@@ -1,0 +1,118 @@
+/* FAQ Container */
+.faq-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  padding: 60px;
+  margin: 20px auto;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* FAQ Title */
+.faq-container h1 {
+  font-size: 2.5em;
+  color: #111;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Introductory text */
+.intro {
+  font-size: 1.0em;
+  color: #222;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* FAQ item container */
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+/* FAQ question */
+.faq-item h2 {
+  font-size: 1.1em;
+  color: #666;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Icon beside question */
+.faq-item h2 i {
+  margin-left: 10px;
+  font-size: 0.8em;
+  transition: transform 0.3s ease;
+}
+
+/* Hidden answer */
+.faq-item .answer {
+  font-size: 0.9em;
+  color: #666;
+  margin: 0;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s ease;
+}
+
+/* Expanded answer */
+.faq-item.active .answer {
+  margin-top: 10px;
+}
+
+/* ================= Header Section ================= */
+
+.header-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+/* Logo on the left */
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #111;
+}
+
+/* Navigation in the center */
+.nav-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.nav-center a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Company info on the right */
+.company-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 0.9em;
+  color: #666;
+  text-align: right;
+}
+
+.company-info .main-name {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #111;
+}
