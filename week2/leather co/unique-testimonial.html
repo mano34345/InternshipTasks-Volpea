@@ -31,40 +31,50 @@
   </div>
 
 </section>
+  <!-- Dots -->
+    <div class="testimonial-dots"></div>
+
+    <div class="view-all-wrapper">
+      <a href="#" class="view-all-button">VIEW ALL</a>
+    </div>
+
+  </section>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const wrapper = document.querySelector(".unique-testimonial-wrapper");
-    const allCards = Array.from(wrapper.children).filter(el => el.classList.contains("unique-testimonial-card"));
+    const cards = Array.from(wrapper.querySelectorAll(".unique-testimonial-card"));
     const dotsContainer = document.querySelector(".testimonial-dots");
 
-    // Only enable pagination on mobile
-    if (window.innerWidth <= 768) {
-      const cardsPerPage = 1;
-      const totalPages = Math.ceil(allCards.length / cardsPerPage);
-      let currentIndex = 0;
+    if (window.innerWidth <= 768 && cards.length > 0) {
+      const numberOfDots = 3;
 
-      function showPage(index) {
-        wrapper.innerHTML = "";
-        const start = index * cardsPerPage;
-        const end = start + cardsPerPage;
-        allCards.slice(start, end).forEach(card => wrapper.appendChild(card));
-        updateDots(index);
-      }
-
-      function updateDots(activeIndex) {
-        dotsContainer.innerHTML = "";
-        for (let i = 0; i < totalPages; i++) {
-          const dot = document.createElement("div");
-          dot.className = "testimonial-dot" + (i === activeIndex ? " active" : "");
-          dot.addEventListener("click", () => {
-            currentIndex = i;
-            showPage(currentIndex);
+      // Create exactly 3 dots
+      for (let i = 0; i < numberOfDots; i++) {
+        const dot = document.createElement("div");
+        dot.classList.add("testimonial-dot");
+        if (i === 0) dot.classList.add("active");
+        dot.addEventListener("click", () => {
+          const scrollZoneWidth = wrapper.scrollWidth / numberOfDots;
+          wrapper.scrollTo({
+            left: scrollZoneWidth * i,
+            behavior: "smooth",
           });
-          dotsContainer.appendChild(dot);
-        }
+        });
+        dotsContainer.appendChild(dot);
       }
 
-      showPage(currentIndex);
+      // Update dot based on scroll position
+      wrapper.addEventListener("scroll", () => {
+        const scrollLeft = wrapper.scrollLeft;
+        const scrollZoneWidth = wrapper.scrollWidth / numberOfDots;
+        const activeIndex = Math.round(scrollLeft / scrollZoneWidth);
+
+        const allDots = dotsContainer.querySelectorAll(".testimonial-dot");
+        allDots.forEach(dot => dot.classList.remove("active"));
+        if (allDots[activeIndex]) {
+          allDots[activeIndex].classList.add("active");
+        }
+      });
     }
   });
 </script>

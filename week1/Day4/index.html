@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      text-align: center;
+      background-color: #f2f2f2;
+    }
+
+    input {
+      padding: 10px;
+      width: 250px;
+      margin: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #message {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Enter Your Name</h2>
+
+  <input type="text" id="nameInput" placeholder="Your name here">
+  <br>
+  <button onclick="showMessage()">Submit</button>
+
+  <p id="message"></p>
+
+  <script>
+    function showMessage() {
+      var name = document.getElementById("nameInput").value;
+      if (name.trim() !== "") {
+        document.getElementById("message").innerText = "Welcome, " + name + "!";
+      } else {
+        document.getElementById("message").innerText = "Please enter your name.";
+      }
+    }
+  </script>
+
+</body>
+</html>
