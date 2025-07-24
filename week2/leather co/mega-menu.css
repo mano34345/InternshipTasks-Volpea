@@ -435,14 +435,21 @@ nav ul li {
 @media screen and (max-width: 768px) {
   .mobile-icon-left {
     display: block;
-    width: 22px;
-    height: 25px;
-    margin-right: 10px;
-    margin-left: 200px;
+    width: 24px;
+    height: 24px;
     object-fit: contain;
-    margin-top: 10px;
+    margin: 10px 0 0 200px;              
+    padding: 0;
+    flex-shrink: 0;
+  }
+
+  .icon-hamburger {
+    display: flex;
+    align-items: center;
+    gap: 4px; /* Controls space between hamburger & icon */
   }
 }
+
 
 
 

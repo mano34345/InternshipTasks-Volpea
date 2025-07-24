@@ -267,3 +267,84 @@
     text-align: center;
   }
 }
+/* =================== 📱 Tablet (768px - 1024px) =================== */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .footer-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 40px;
+    gap: 20px;
+  }
+
+  .footer-left {
+    flex: 1 1 150px;
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  .footer-logo {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .footer-links {
+    flex: 2 1 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+    padding-left: 0;
+    width: 100%;
+  }
+
+  .footer-section {
+    flex: 1;
+    min-width: 200px;
+  }
+
+  
+  .footer-section.shop {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .footer-section.shop ul,
+  .footer-section.shop .submenu,
+  .footer-section.shop .submenu-links,
+  .footer-section.shop .submenu-group {
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+  }
+
+  .footer-section.shop .submenu {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  
+  .footer-section.company {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .footer-section.company ul,
+  .footer-section.company li,
+  .footer-section.company a {
+    text-align: left;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  /* 🔵 Footer bottom center aligned */
+  .footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+  }
+}
