@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Profile with Age Verification</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="light-theme">
+<noscript>
+  <div style="background-color: red; color: white; padding: 10px; text-align: center;">
+    JavaScript is required for age verification. Please enable it.
+  </div>
+</noscript>
+
+<!-- ✅ Keep Only One Age Modal -->
+<div class="modal" id="ageModal" style="display: flex;">
+  <div class="modal-content">
+    <h2>Age Verification</h2>
+    <p>Please enter your age to continue:</p>
+    <input type="number" id="ageInput" placeholder="Enter your age" min="1" />
+    <br>
+    <button onclick="verifyAge()">Submit</button>
+  </div>
+</div>
+
+<!-- Main Container -->
+<div class="container" id="mainContainer" style="display: none;">
+  <span class="theme-icon" onclick="toggleTheme()" id="themeIcon">☀</span>
+  <h1>From Birth to This Moment</h1>
+
+  <!-- DOB -->
+  <div class="age-verification">
+    <h3>Date of Birth</h3>
+    <label>Enter Date of Birth:</label><br>
+    <select id="dobDay" class="dob-select"><option value="">Day</option></select>
+    <select id="dobMonth" class="dob-select">
+      <option value="">Month</option>
+      <option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option>
+      <option value="4">Apr</option><option value="5">May</option><option value="6">Jun</option>
+      <option value="7">Jul</option><option value="8">Aug</option><option value="9">Sep</option>
+      <option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option>
+    </select>
+    <select id="dobYear" class="dob-select"><option value="">Year</option></select>
+    <br><button onclick="verifyDOB()">Submit DOB</button>
+  </div>
+
+  <div class="info-box" id="ageInfo"></div>
+
+  <!-- Country Section -->
+  <div class="country-section">
+    <h2>Choose a Country</h2>
+    <select id="countrySelect" onchange="updateCountryInfo()">
+      <option value="">-- Select a country --</option>
+      <option value="france">France</option>
+      <option value="germany">Germany</option>
+      <option value="japan">Japan</option>
+      <option value="canada">Canada</option>
+      <option value="pakistan">Pakistan</option>
+      <option value="australia">Australia</option>
+    </select>
+    <div id="countryDisplay" style="margin-top: 20px;"></div>
+  </div>
+
+  <h1>IP & Country Detection</h1>
+    
+    <div class="buttons">
+        <button id="sessionBtn" class="active">Use Session Storage</button>
+        <button id="localBtn">Use Local Storage</button>
+
+    </div>
+    
+    <div id="geoInfo" class="info-container">
+        <div class="loading">Detecting your IP and country...</div>
+    </div>
+
+  
+
+   <center><button id="resetBtn" onclick="resetData()">Reset Data</button></center>
+  </div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
