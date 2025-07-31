@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gen-Z Slang Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Start Page -->
+  <div class="card" id="start-page">
+    <h1>✨ Slang Quiz ✨</h1>
+    <p>Think you’re lowkey fluent in Gen-Z? Let’s find out 💅</p>
+    <p class="light">Total Questions: 5 | Time: 60s</p>
+    <button id="start-btn">Start Quiz</button>
+  </div>
+
+  <!-- Quiz Page -->
+  <div class="card hide" id="quiz-page">
+    <div class="top-bar">
+      <div id="timer">⏳ Time Left: <span id="time">60</span>s</div>
+      <div id="score-box">🔥 Score: 0</div>
+    </div>
+    <h2 id="question">Question text</h2>
+    <div id="options"></div>
+    <button id="next-btn" class="hide">Next</button>
+  </div>
+
+  <!-- Result Page -->
+  <div class="card hide" id="result-page">
+    <h2>🏁 You're Done!</h2>
+    <p id="final-score"></p>
+    <p id="percentage"></p>
+    <p id="final-time"></p>
+    <button id="restart-btn">Try Again</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
