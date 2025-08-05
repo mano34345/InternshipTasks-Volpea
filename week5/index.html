@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegance Necklace Shop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome CDN for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<header class="header">
+    <div class="header-container">
+        <div class="logo-container">
+            <h1 class="logo">NeckMuse</h1>
+            <p class="tagline">Minimal. Magical. Memorable.</p>
+        </div>
+        <nav class="nav">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#products" class="nav-link">Products</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+        <div class="header-actions">
+            <div class="search-container">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+                <input type="text" id="search-input" placeholder="Search products..." class="search-input">
+            </div>
+            <!-- Cart Icon with Badge -->
+            <div class="cart-icon" onclick="toggleCart()">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count" class="cart-count">0</span>
+            </div>
+            <button class="admin-btn" id="admin-btn" onclick="toggleAdmin()">Admin Mode</button>
+        </div>
+    </div>
+</header>
+
+<!-- Hero Image Section -->
+<section class="hero-section">
+    <a href="#collections">
+        <img src="assets/75146b4550824d4b4c2aa1988bba21c8.jpg" alt="Elegant Necklace Collection" class="hero-image">
+        <div class="hero-overlay">
+            <div class="hero-text">Discover Our Latest Collections</div>
+        </div>
+    </a>
+</section>
+
+<main id="root" class="container">
+    <!-- Dynamic content rendered by JavaScript -->
+</main>
+
+<!-- Modal Alert Box -->
+<div id="alertModal" class="modal-overlay" style="display: none;">
+    <div class="modal-box">
+        <p id="alertMessage"></p>
+        <button id="alertOkBtn" class="ok-btn">OK</button>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Elegance Necklace Shop</h3>
+            <p>Crafting timeless elegance with every piece.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>Email: info@elegancenecklaces.com</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Address: 123 Jewel Street, Elegance City</p>
+        </div>
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-links">
+                <a href="#" class="social-link">Facebook</a>
+                <a href="#" class="social-link">Instagram</a>
+                <a href="#" class="social-link">Twitter</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2025 Elegance Necklace Shop. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
