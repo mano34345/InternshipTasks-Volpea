@@ -1,0 +1,295 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 32px;
+    background-color: #f5f7fa;
+    color: #1e3a8a;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    color: #1e3a8a;
+    margin-bottom: 24px;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #1e3a8a;
+    margin-bottom: 16px;
+}
+
+.search-container {
+    margin-bottom: 24px;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background-color: #f9fafb;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#searchInput:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-container {
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    margin-bottom: 32px;
+}
+
+#userForm, #editForm {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#userForm input, #editForm input {
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    flex: 1;
+    background-color: #f9fafb;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#userForm input:focus, #editForm input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+#userForm button, #editForm button {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#userForm button:hover, #editForm button:hover {
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    transform: translateY(-1px);
+}
+
+.user-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.user-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    text-align: center;
+    animation: cardAppear 0.5s ease-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@keyframes cardAppear {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.user-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(59, 130, 246, 0.15);
+}
+
+.user-card img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    border: 2px solid #3b82f6;
+    margin-bottom: 12px;
+}
+
+.user-card h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #1e3a8a;
+    margin: 8px 0;
+}
+
+.user-card p {
+    font-size: 14px;
+    color: #4b5563;
+    margin: 4px 0;
+}
+
+.user-card button {
+    margin: 8px 4px;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.user-card button.edit {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: #ffffff;
+}
+
+.user-card button.delete {
+    background: linear-gradient(135deg, #ef4444, #b91c1c);
+    color: #ffffff;
+}
+
+.user-card button:hover {
+    transform: translateY(-1px);
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.pagination button:disabled {
+    background: #bfdbfe;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.pagination button:hover:not(:disabled) {
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    transform: translateY(-1px);
+}
+
+.pagination span {
+    font-size: 14px;
+    color: #1e3a8a;
+}
+
+.loading {
+    text-align: center;
+    padding: 24px;
+    font-size: 16px;
+    color: #3b82f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-circle {
+    width: 32px;
+    height: 32px;
+    border: 3px solid #bfdbfe;
+    border-top: 3px solid #3b82f6;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin-right: 12px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.error {
+    background: #fee2e2;
+    color: #991b1b;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.modal, .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 58, 138, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content, .popup-content {
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 1px solid #e5e7eb;
+}
+
+.popup-content button {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.popup-content button:hover {
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    transform: translateY(-1px);
+}
+
+.hidden {
+    display: none;
+}
